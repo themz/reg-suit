@@ -1,0 +1,40 @@
+{
+  "name": "reg-publish-gcs-plugin-optimized",
+  "version": "0.12.1",
+  "description": "Fetch and publish snapshot images to Google Cloud Storage.",
+  "main": "lib/index.js",
+  "scripts": {
+    "prepublish": "tsc -p tsconfig.build.json",
+    "clean:e2e": "rimraf e2e/report-fixture-expected",
+    "test": "npm run clean:e2e && ts-node e2e/script.ts",
+    "watch": "tsc -w -p tsconfig.build.json"
+  },
+  "keywords": [
+    "GCP",
+    "GCS",
+    "Google Cloud Storage",
+    "reg",
+    "reg-suit-plugin"
+  ],
+  "author": {
+    "name": "Quramy",
+    "email": "yosuke.kurami@gmail.com"
+  },
+  "repository": "git+https://github.com/reg-viz/reg-suit.git",
+  "license": "MIT",
+  "dependencies": {
+    "@google-cloud/storage": "^5.3.0",
+    "form-data": "^4.0.0",
+    "mkdirp": "^1.0.4",
+    "reg-suit-util": "^0.12.1",
+    "uuid": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/glob": "7.2.0",
+    "@types/mkdirp": "1.0.2",
+    "@types/uuid": "8.3.4",
+    "glob": "7.2.0",
+    "reg-suit-interface": "^0.12.1",
+    "typescript": "4.5.2"
+  }
+}
